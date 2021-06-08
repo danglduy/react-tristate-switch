@@ -7,7 +7,15 @@ function Switch({ status, ...props }) {
 
   return (
     <motion.div animate className={className} {...props}>
-      <motion.div animate />
+      <motion.div
+        animate
+        layout
+        transition={{
+          type: "spring",
+          stiffness: 700,
+          damping: 30,
+        }}
+      />
     </motion.div>
   );
 }
